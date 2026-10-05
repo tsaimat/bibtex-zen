@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>DOI to BibTeX settings</title>
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 16px; max-width: 520px; }
+  input { font: inherit; padding: 6px 8px; width: 220px; }
+  button { font: inherit; padding: 6px 12px; margin-left: 4px; }
+  .row { margin: 12px 0; }
+  .hint { color: #666; font-size: 12px; }
+  #msg { min-height: 1.2em; }
+  #msg.err { color: #b00020; } #msg.ok { color: #1b6e2e; }
+</style></head>
+<body>
+<h3>Keyboard shortcut</h3>
+<p>Copies the BibTeX for the selected DOI, or for the page you are on.</p>
+<div class="row">
+  <input id="sc" readonly placeholder="Click here, then press the keys">
+  <button id="save">Save</button>
+  <button id="reset">Reset to default</button>
+</div>
+<p id="msg"></p>
+<p class="hint">Needs Ctrl or Alt plus a key (e.g. Alt+Shift+B). Avoid Ctrl+B: it toggles the
+bookmarks sidebar in Firefox-based browsers and is "bold" in Overleaf and Google Docs.
+You can also change it under Add-ons &rarr; gear icon &rarr; Manage Extension Shortcuts.</p>
+<script src="options.js"></script>
+</body></html>

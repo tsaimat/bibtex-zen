@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "bibtex-zen",
+  "version": "1.10",
+  "description": "Select a DOI (or right-click a DOI link / paper page), choose \"Copy BibTeX from DOI\", and the BibTeX entry is copied to your clipboard.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "doi-to-bibtex@local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "contextMenus",
+    "clipboardWrite",
+    "notifications",
+    "activeTab",
+    "https://doi.org/*",
+    "https://dx.doi.org/*",
+    "https://*.crossref.org/*",
+    "https://*.datacite.org/*",
+    "https://api.biorxiv.org/*"
+  ],
+  "background": {
+    "scripts": [
+      "bibtex.js",
+      "background.js"
+    ]
+  },
+  "commands": {
+    "copy-bibtex-page": {
+      "suggested_key": {
+        "default": "Alt+Shift+B"
+      },
+      "description": "Copy BibTeX for the selected DOI or the current page"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
